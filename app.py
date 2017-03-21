@@ -55,4 +55,8 @@ def tickerTape_serverError(e):
     return render_template('tickerTape_500.html'), 500
 
 if __name__ == '__main__':
-    app_tickerTape.run(port=33507)
+    port = int(os.environ.get("PORT", 5000))
+    app_tickerTape.run(port=port)
+
+
+
