@@ -1,0 +1,30 @@
+<!doctype html>
+<title>TickerTape</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='ticker_style.css')}}'>
+<div class=page>
+    <h1>TickerTape: A simple app to get stock closing prices</h1>
+    <div class =metanave>
+
+        <h4>
+            View results below, or request another code.
+        </h4>
+
+        <form id='home_tickerForm' method='post' action='home' >
+            <p>
+        TickerSymbol: <input type='text' name = 'symbol' />
+            </p>
+            <p>
+        <input type='submit' value = 'Submit' />
+            </p>
+        </form>
+        <h4>
+            Requested code: {{symbol}}
+        </h4>
+        
+    </div>
+    <div>
+        <iframe src="bokehPlot" name="targetframe" width=700 height=620  allowTransparency="true" scrolling="no" frameborder=3px >
+        </iframe>
+    </div>
+</div>
+</html>

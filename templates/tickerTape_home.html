@@ -1,0 +1,23 @@
+<!doctype html>
+<title>TickerTape</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='ticker_style.css')}}'>
+<div class=page>
+    <h1>TickerTape: A simple app to get stock closing prices</h1>
+    <div class =metanave>
+
+        <h4>
+            Please enter the code for your desired listing.
+        </h4>
+
+        <form id='home_tickerForm' method='post' action='home' >
+            <p>
+        TickerSymbol: <input type='text' name = 'symbol' />
+            </p>
+            <p>
+        <input type='submit' value = 'Submit' />
+            </p>
+        </form>
+
+    </div>
+</div>
+</html>
